@@ -83,11 +83,8 @@ function theme_custom ($template) {
 		//set the site logo
 		'img#nnf_logo@src'                                   => FORUM_PATH.'themes/'.FORUM_THEME.'/img/'.THEME_LOGO,
 		
-		//set the forum URL for Google search-by-site
-		'//input[@name="as_sitesearch"]/@value'              => $_SERVER['HTTP_HOST'],
-		//if you're using a Google search, change it to HTTPS if enforced
-		'//form[@action="http://google.com/search"]/@action' => FORUM_HTTPS ? 'https://encrypted.google.com/search'
-		                                                                    : 'http://google.com/search'
+		//set the forum URL for duckduckgo search-by-site
+		'//input[@name="sites"]/@value'              => $_SERVER['HTTP_HOST'],
 	));
 }
 
